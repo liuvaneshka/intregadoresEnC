@@ -23,7 +23,6 @@ void cargar_datos_jugador(jugador_t *jugador){
     for(int i = 0; i < jugador->cant_impostor; i++){
         printf("cuantos tripulantes asesinaste en la %zu ocasion? \n",i+1);
         scanf("%d",&jugador->cant_asesinados[i]);
-
     }
 
     printf("cuantas veces fuiste tripulante? \n");
@@ -40,10 +39,10 @@ void cargar_datos_jugador(jugador_t *jugador){
 
     printf("fuiste tripulante: %d \n",jugador->cant_tripulante);
     printf("moriste:           %d \n",jugador->cant_muertes);
-
 }
 
 float calculo_pedido(int *cant_asesinados, int cant_impostor, int cant_tripulante, int cant_muertes){
+    
     int total_asesinados = 0;
     float calculo = 0;
 
@@ -51,14 +50,12 @@ float calculo_pedido(int *cant_asesinados, int cant_impostor, int cant_tripulant
         //printf("i = %d \n",i);
         //printf("asesinados: %d \n",*(cant_asesinados + i));
         total_asesinados += *(cant_asesinados + i);
-
     }
+    
     printf("total asesinados: %d \n", total_asesinados);
     printf("muertes :  %d\n",cant_muertes);
     printf("tripulante : %d \n",cant_tripulante);
-
     calculo = total_asesinados / ( cant_tripulante - cant_muertes);
-
     printf("calculo = %f",calculo);
 }
 
