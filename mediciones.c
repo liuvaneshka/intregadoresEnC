@@ -13,7 +13,6 @@ typedef struct mediciones{
 }mediciones_t;
 
 int cargar_mediciones(mediciones_t *mediciones){
-
     int med;
     int cant_med = 0;
     int i = 0;
@@ -37,7 +36,6 @@ int cargar_mediciones(mediciones_t *mediciones){
 }
 
 int calculo_max(mediciones_t mediciones, int cant_mediciones){
-
     int maximo = mediciones.medicion[0];
 
     for(size_t i = 0; i<cant_mediciones;i++){
@@ -45,14 +43,11 @@ int calculo_max(mediciones_t mediciones, int cant_mediciones){
         if(mediciones.medicion[i]>maximo){
             maximo=mediciones.medicion[i];
         }
-
     }
-
     return maximo;
 }
 
 int calculo_min(mediciones_t mediciones, int cant_mediciones){
- 
     int minimo = mediciones.medicion[0];
 
     for(size_t i = 0; i<cant_mediciones;i++){
@@ -60,7 +55,6 @@ int calculo_min(mediciones_t mediciones, int cant_mediciones){
         if(mediciones.medicion[i]<minimo){
             minimo=mediciones.medicion[i];
         }
-
     }
     return minimo;
 }
@@ -68,7 +62,6 @@ int calculo_min(mediciones_t mediciones, int cant_mediciones){
 float calculo_valor(mediciones_t mediciones, int maximo, int minimo){
 
     float valor;
-
     valor = (maximo - minimo)/2;
 
     return valor;
@@ -115,5 +108,4 @@ int main(){
     }
 
     return 0;
-
 }
