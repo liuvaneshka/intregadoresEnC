@@ -20,9 +20,7 @@ int main(){
 
     int max = 0;
     int min = 0;
-
     int numeros[] = {1, 57, -10, 0, 11, 34, -3, -21, 77, -8, 90};
-
     int tamanio = sizeof(numeros)/sizeof(numeros[0]);  
 
     printf("\n tamanio: %i",tamanio);
@@ -33,4 +31,5 @@ int main(){
     printf("\n min: %i", min);
 
     return 0;
+    
 }
