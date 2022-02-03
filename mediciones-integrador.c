@@ -69,16 +69,11 @@ int main(){
     int max_medicion = 0;
     int min_medicion = 0;
     float valor_fomula = 0;
-
     
     cantidad_mediciones= cargar_mediciones(&mediciones);
-
     printf("\n 1. CANTIDAD TOTAL DE MEDICIONES INGRESADAS: %i ",cantidad_mediciones); 
-    
     asigna_max_min(mediciones, cantidad_mediciones, &max_medicion, &min_medicion);
-
     valor_fomula = (max_medicion - min_medicion) / 2;
-
     imprimir(cantidad_mediciones, valor_fomula, mediciones);
 
     return 0;
