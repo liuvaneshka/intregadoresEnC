@@ -9,9 +9,9 @@ int main(){
     int posicion = 0;
     int resultado = 0;
 
-    printf("ingrese el primer nuemro: ");
+    printf("ingrese el primer numero: ");
     scanf("%i",&primer_numero);
-    printf("ingrese el segundo nuemro: ");
+    printf("ingrese el segundo numero: ");
     scanf("%i",&segundo_numero);
 
     if(primer_numero<segundo_numero ){
@@ -21,7 +21,6 @@ int main(){
 
     else{
         for(int i=primer_numero;i>=segundo_numero;i-- ){
-            
             printf(" valores: %i ",i);
             a[posicion]=i;
             posicion++;
@@ -29,13 +28,10 @@ int main(){
         printf("\n cantidd numeros: %i", posicion);
 
         for(int j=1;j<posicion;j++){
-
             printf("\n contenido vector: %i", a[j]);
             resultado+=a[j];
-
         }
         printf("\n resultado; %i", primer_numero - resultado);
-
     }
 
     return 0;
