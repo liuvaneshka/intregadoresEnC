@@ -14,11 +14,63 @@ void imprimir_vector(int *vector, int n) {
 }
 
 
-void mover_elemento(int vector[], int n, int desde, int hasta){
+void swap_elemento(int vector[], int n, int desde, int hasta){
     int temp = vector[desde];
     vector[desde] = vector[hasta];
     vector[hasta] = temp;
 }
+
+
+void mover_elemento(int vector[], int n, int desde, int hasta){
+    int temp = vector[desde];
+    int v[MAX_SIZE];
+
+    for (int i = 0; i < n; i++){
+        v[i] = vector[i];
+    }
+
+    for(int i = 0; i < n ; i++){
+        if(i > desde && i<=hasta){
+            vector[i-1] = v[i];
+        }
+        else{
+            vector[i] = v[i];
+        }
+    }
+    vector[hasta] = v[desde];
+
+    /*
+    for(int i = 0; i < n; i++){
+        if(desde==0){
+            if(desde<i<hasta){
+                vector[i] = vector[i+1];
+            }
+            if(i==hasta){
+                vector[i] = temp;
+            }
+            if(i>hasta){
+                vector[i] = v[i] ;
+            }
+        }
+        if(desde>0){
+            if(i < desde){
+                vector[i] = v[i];
+            }
+            if(i == desde){
+                vector[i] = v[desde+1];
+                desde++;
+            }
+            if(i== hasta){
+                vector[i] = temp;
+            }
+            if(i>hasta){
+                vector[i] = v[i];
+            }
+        }
+    }
+    */
+}
+
 
 int main(){
     int i=0;
